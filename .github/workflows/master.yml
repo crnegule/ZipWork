@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      - name: Switch to LogCatcher Folder
+    - name: Switch to LogCatcher Folder
       run: |
         cd LogCatcher
         ls -la
