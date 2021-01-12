@@ -13,7 +13,10 @@ jobs:
         cd LogCatcher
         ls -la
     - name: Create Release Folder
-      run: rsync -arv --exclude='.git/' --exclude='.github/' --exclude='.gitignore' . ./release
+      run: |
+        cd LogCatcher
+        ls -la
+        rsync -arv --exclude='.git/' --exclude='.github/' --exclude='.gitignore' . ./release
     - name: Switch to Release Folder
       run: |
         cd release
