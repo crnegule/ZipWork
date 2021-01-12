@@ -17,11 +17,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Build project # This would actually build your project, using zip for an example artifact
         run: |
-          ls,
-          zip --junk-paths my-artifact README.md.
+          zip --junk-paths my-artifact README.md
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
